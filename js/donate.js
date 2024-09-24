@@ -1,4 +1,5 @@
 const history =[];
+
 document.getElementById('noakhali-donate-btn')
 .addEventListener('click',function(){   
 
@@ -9,19 +10,20 @@ if(isNaN (noakhaliInput)){
     alert('please look carefully and inter number');
     return;
 }
-
-
 const balance = noakhaliInput + noakhaliAmount;
-document.getElementById('noakhali-amount').innerText = balance;
+
 const defaultAmount = getTextValueFile("default-amount");
-
-
+if(defaultAmount < noakhaliInput){
+    alert('Yor have not enough money!');
+    return;
+}
+document.getElementById('noakhali-amount').innerText = balance;
 const newAmount = defaultAmount - noakhaliInput;
 document.getElementById("default-amount").innerText = newAmount;
 document.getElementById('noakhali-input').value = "";
  const text = noakhaliInput +" Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh";
 donateHistory(noakhaliInput, text);
-
+ document.getElementById('my_modal_1').showModal();
 })
 
 document.getElementById("fani-donate-btn")
@@ -43,6 +45,7 @@ document.getElementById("default-amount").innerText = newAmount;
 document.getElementById("fani-input").value = "";
 const text = faniInput + 'Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh';
 donateHistory(faniInput, text);
+document.getElementById('my_modal_1').showModal();
 })
 
 document.getElementById("injured-donate-btn")
@@ -64,6 +67,7 @@ document.getElementById("default-amount").innerText = newAmount;
 document.getElementById("injured-input").value = "";
 const text = injuredInput +" Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh";
 donateHistory(injuredInput, text);
+document.getElementById('my_modal_1').showModal();
 })
 // history discrive
 function historyElement(){
@@ -76,17 +80,7 @@ function historyElement(){
         <p class="from-neutral-500">Date: ${element.time}</p>
         `
         historyList.appendChild(li);
-      
     });
     
 }
-// const historyList = document.getElementById('history-list')
-// const li = document.createElement('li');
-// history.forEach(element => {
-//     li.innerHTML =`
-//     <p> ${element.text}</p>
-//     <p> ${element.time}</p>
-//     `
-//     historyList.appendChild(li);
-//     console.log('kaj korse',historyList);
-// });
+

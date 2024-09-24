@@ -41,15 +41,32 @@
     </header>
     <main>
         <div class="text-center my-6 space-x-5 ">
-            <button id="donate-open-btn" class="btn btn-lg bg-lime-400 w-40 ">Donate</button>
-            <button id="history-open-btn" onclick="historyElement()" class="btn btn-lg w-40">History</button>
+            <button id="donate-open-btn" class=" btn-lg text-xl font-bold border-2 rounded-lg bg-lime-400 w-40 ">Donate</button>
+            <button id="history-open-btn" onclick="historyElement()" class="border-2 rounded-lg btn-lg w-40">History</button>
         </div>
-
-        <!-- history section start -->
+        <!-- modal start -->
+             <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="my_modal_1" class="modal text-center">
+  <div class="modal-box">
+    <h3 class="text-2xl font-extrabold">Congrats!</h3>
+    <br>
+    <img class="mx-auto" src="images/coin.png" alt="">
+    <p class="py-4">you have donated for human kind</p>
+    <p class="py-4 text-xl font-bold">successful</p>
+    <div>
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close conformation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+        <!-- modal end -->
+      <!-- history section start -->
          <div id="history-section"
          class="w-9/12 mx-auto">
         <ul id="history-list">
-
         </ul>
          </div>
 
@@ -65,7 +82,7 @@
                         </div>
                         <div class="w-6/12 mx-12 my-5">
                             <!-- donate amount start -->
-                            <div class=" bg-gray-200 w-24 rounded-md flex gap-1 mx-4 px-2 py-2 -ml-1">
+                            <div class=" bg-gray-200 max-w-28 rounded-md flex gap-1 mx-4 px-2 py-2 -ml-1">
                                 <img class="w-6 h-6" src="images/coin.png" alt="icon">
                                 <span id="noakhali-amount" class="text-gray-500">0</span>
                                 <span class="text-gray-500">BDT</span>
