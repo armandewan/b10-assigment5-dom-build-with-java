@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    
+    <header>
+        <div class="flex justify-between my-2 mb-6 bg-lime-50">
+            <!-- Blog describe start--> 
+            <div> 
+                <div>
+                    <button class="text-1xl font-bold bg-lime-400 w-28 mx-4 my-2 px-2 py-2 rounded">
+                        Blog
+                    </button>
+                    
+                </div>
+            </div>
+            <!-- Blog describe end -->
+            <!-- Banner text start -->
+                <div class="flex gap-2 mx-4 px-2 py-2">
+                    <img class="w-7 h-7" src="images/logo.png" alt="">
+                    <p class="text-xl text-center font-bold ">Donate Bangladesh</p>
+                </div>
+            <!-- Banner text end -->
+            <!-- default amount start -->
+            <div class="flex gap-2 mx-4 px-2 py-2">
+                <img class="w-6 h-6" src="images/coin.png" alt="icon">
+                <span id="default-amount" class="font-bold">5500</span>
+                <span class="font-bold">BDT</span>
+
+            </div>
+             <!-- default amount end -->
+        </div>
+    </header>
+    <main>
+        <div class="text-center my-6 space-x-5 ">
+            <button id="donate-open-btn" class="btn btn-lg bg-lime-400 w-40 ">Donate</button>
+            <button id="history-open-btn" onclick="historyElement()" class="btn btn-lg w-40">History</button>
+        </div>
+
+        <!-- history section start -->
+         <div id="history-section"
+         class="w-9/12 mx-auto">
+        <ul id="history-list">
+
+        </ul>
+         </div>
+
+        <!-- history section end-->
+            <div id="donate-section">
+                <!-- fast card start -->
+                <section class=" w-9/12 border rounded-xl mt-20 mx-auto ">
+                    <div class="flex justify-between">
+                        <div>
+                            <img class="my-5 mx-5 "
+                            src="images/noakhali.png"
+                            alt="Album" />
+                        </div>
+                        <div class="w-6/12 mx-12 my-5">
+                            <!-- donate amount start -->
+                            <div class=" bg-gray-200 w-24 rounded-md flex gap-1 mx-4 px-2 py-2 -ml-1">
+                                <img class="w-6 h-6" src="images/coin.png" alt="icon">
+                                <span id="noakhali-amount" class="text-gray-500">0</span>
+                                <span class="text-gray-500">BDT</span>
+                            </div>
+                            <!-- donate amount end -->
+                            <h2 class="card-title text-lg font-bold">Donate for flood at Noakhali,Bangladesh</h2>
+                            <p class="text-gray-500">The recent floods in noakhali have caused significant damage to home infrastructure. You donation will help provide essential surprise and to those effected by this disaster. Every continuation, big or small, makes difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                            <input
+                                type="text" id="noakhali-input"
+                                placeholder="write donate amount"
+                                class="input input-bordered input-md w-full max-w-xs my-2" />
+                                <br>
+                            <button id="noakhali-donate-btn" class="btn font-bold text-xl bg-lime-400 w-full">Donate Now</button>
+                        </div>
+                    </div>
+                 </section>
+                 <!-- fast card end -->
+                 <!-- second card start -->
+                 <section class=" w-9/12 border rounded-xl mt-20 mx-auto ">
+                    <div class="flex justify-between">
+                        <div>
+                            <img class="my-5 mx-5 "
+                            src="images/feni.png"
+                            alt="Album" />
+                        </div>
+                        <div class="w-6/12 mx-12 my-5">
+                            <!-- donate amount start -->
+                            <div class=" bg-gray-200 w-24 rounded-md flex gap-1 mx-4 px-2 py-2 -ml-1">
+                                <img class="w-6 h-6" src="images/coin.png" alt="icon">
+                                <span id="fani-amount" class="text-gray-500">0</span>
+                                <span class="text-gray-500">BDT</span>
+                            </div>
+                            <!-- donate amount end -->
+                            <h2 class="card-title text-lg font-bold">Donate for Flood Relief in Fani,Bangladesh</h2>
+                            <p class="text-gray-500">The recent floods in noakhali have caused significant damage to home infrastructure. You donation will help provide essential surprise and to those effected by this disaster. Every continuation, big or small, makes difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                            <input
+                                type="text" id="fani-input"
+                                placeholder="write donate amount"
+                                class="input input-bordered input-md w-full max-w-xs my-2" />
+                                <br>
+                            <button id="fani-donate-btn" class="btn font-bold text-xl bg-lime-400 w-full">Donate Now</button>
+                        </div>
+                    </div>
+                 </section>
+                 <!-- second card end -->
+                 <!-- third card start -->
+                 <section class=" w-9/12 border rounded-xl mt-20 mx-auto ">
+                    <div class="flex justify-between">
+                        <div>
+                            <img class="my-5 mx-5 "
+                            src="images/quota-protest.png"
+                            alt="Album" />
+                        </div>
+                        <div class="w-6/12 mx-12 my-5">
+                            <!-- donate amount start -->
+                            <div class=" bg-gray-200 w-24 rounded-md flex gap-1 mx-4 px-2 py-2 -ml-1">
+                                <img class="w-6 h-6" src="images/coin.png" alt="icon">
+                                <span id="injured-for-money" class="text-gray-500">0</span>
+                                <span class="text-gray-500">BDT</span>
+                            </div>
+                            <!-- donate amount end -->
+                            <h2 class="card-title text-lg font-bold">Aid For Injured in The Quoma Movement</h2>
+                            <p class="text-gray-500">The recent floods in noakhali have caused significant damage to home infrastructure. You donation will help provide essential surprise and to those effected by this disaster. Every continuation, big or small, makes difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                            <input
+                                type="text"
+                                id="injured-input"
+                                placeholder="write donate amount"
+                                class="input input-bordered input-md w-full max-w-xs my-2" />
+                                <br>
+                            <button id="injured-donate-btn" class="btn font-bold text-xl bg-lime-400 w-full">Donate Now</button>
+                        </div>
+                    </div>
+                 </section>
+                 <!-- third card end -->
+            </div>
+       
+    </main>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/donate.js"></script>
+</body>
+</html>
