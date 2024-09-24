@@ -6,15 +6,15 @@ document.getElementById('noakhali-donate-btn')
 const noakhaliInput = getInputAmountFile('noakhali-input');
 
 const noakhaliAmount = getTextValueFile('noakhali-amount');
-if(isNaN (noakhaliInput)){
-    alert('please look carefully and inter number');
+if(isNaN (noakhaliInput) || noakhaliInput < 0){
+    alert('please look carefully and inter amount');
     return;
 }
 const balance = noakhaliInput + noakhaliAmount;
 
 const defaultAmount = getTextValueFile("default-amount");
 if(defaultAmount < noakhaliInput){
-    alert('Yor have not enough money!');
+    alert('You have not enough money!');
     return;
 }
 document.getElementById('noakhali-amount').innerText = balance;
@@ -32,14 +32,17 @@ document.getElementById("fani-donate-btn")
 const faniInput = getInputAmountFile("fani-input");
 
 const faniAmount = getTextValueFile('fani-amount');
-if(isNaN (faniInput)){
-    alert('please look carefully and inter number');
+if(isNaN (faniInput) || faniInput < 0 ){
+    alert('please look carefully and inter amount');
     return;
 }
 const balance = faniInput + faniAmount;
-document.getElementById('fani-amount').innerText = balance;
 const defaultAmount = getTextValueFile("default-amount");
-
+if(defaultAmount < faniInput){
+    alert('You have not enough money!');
+    return;
+}
+document.getElementById('fani-amount').innerText = balance;
 const newAmount = defaultAmount - faniInput;
 document.getElementById("default-amount").innerText = newAmount;
 document.getElementById("fani-input").value = "";
@@ -54,13 +57,17 @@ document.getElementById("injured-donate-btn")
 const injuredInput = getInputAmountFile("injured-input");
 
 const injuredAmount = getTextValueFile('injured-for-money');
-if(isNaN (injuredInput)){
-    alert('please look carefully and inter number');
+if(isNaN (injuredInput) || injuredInput < 0){
+    alert('please look carefully and inter money');
     return;
 }
 const balance = injuredInput + injuredAmount;
-document.getElementById('injured-for-money').innerText = balance;
 const defaultAmount = getTextValueFile("default-amount");
+if(defaultAmount < injuredInput){
+    alert('You have not enough money!');
+    return;
+}
+document.getElementById('injured-for-money').innerText = balance;
 
 const newAmount = defaultAmount - injuredInput;
 document.getElementById("default-amount").innerText = newAmount;
